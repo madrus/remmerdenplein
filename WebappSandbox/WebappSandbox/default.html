@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>WebappSandbox</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <!-- WebappSandbox references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+</head>
+<body>
+    <section style="margin-left: 120px;margin-top: 45px;">
+        <hgroup>
+            <h1>Markup</h1>
+            <h2>Demo</h2>
+        </hgroup>
+        <p>Favorites:</p>
+        <form onsubmit="uma2rmah.play(); return false;">
+            <input id="favUrl" type="url" required="required" placeholder="http://www.palermo4.com" />
+            <input type="submit" value="Save..." />
+        </form>
+        <figure>
+            <audio src="/audio/uma2rmah.mp3" id="uma2rmah"></audio>
+            <video controls="controls">
+                <source src="/video/bobsleigh.mp4" type="video/mp4" />
+            </video>
+        </figure>
+    </section>
+</body>
+</html>
