@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloGitBootstrap", "HelloGitBootstrap\HelloGitBootstrap.csproj", "{429E0D40-8E4E-45CD-8909-FDFC9917566D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{14883A1C-1A5A-4BED-AB4A-01BB08C70FA1}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{429E0D40-8E4E-45CD-8909-FDFC9917566D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{429E0D40-8E4E-45CD-8909-FDFC9917566D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{429E0D40-8E4E-45CD-8909-FDFC9917566D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{429E0D40-8E4E-45CD-8909-FDFC9917566D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
