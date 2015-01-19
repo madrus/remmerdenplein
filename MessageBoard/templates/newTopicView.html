@@ -1,0 +1,33 @@
+﻿<h3>New Topic</h3>
+<form role="form" name="newTopicForm" novalidate data-ng-submit="save()">
+  <fieldset>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <div class="row">
+        <div class="col-sm-3">
+          <input class="form-control" name="title" type="text" data-ng-model="newTopic.title" data-ng-minlength="5" required />
+        </div>
+        <div class="col-sm-2">
+          <span class="error" data-ng-show="newTopicForm.title.$error.required">*</span>
+          <span class="error" data-ng-show="newTopicForm.title.$error.minlength">Minimum 5 characters</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="body">Comment</label>
+      <div class="row">
+        <div class="col-sm-3">
+          <textarea class="form-control" name="body" rows="5" cols="30" data-ng-model="newTopic.body" data-ng-minlength="15" required />
+        </div>
+        <div class="col-sm-2">
+          <span class="error" data-ng-show="newTopicForm.body.$error.required">*</span>
+          <span class="error" data-ng-show="newTopicForm.body.$error.minlength">Minimum 15 characters</span>
+        </div>
+      </div>
+    </div>
+
+    <input type="submit" value="Save" class="btn btn-default" data-ng-disabled="newTopicForm.$invalid" />
+    <a href="#/" class="btn btn-default">Cancel</a>
+  </fieldset>
+</form>

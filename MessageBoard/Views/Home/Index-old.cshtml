@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MessageBoard.Data.Topic>
+@{
+  ViewBag.Title = "Home Page";
+}
+@section scripts {
+  <script src="~/js/home-index.js"></script>
+}
+
+<div data-ng-controller="homeIndexController">
+  <div class="message-header">
+    <h1>Message Board</h1>
+    <p class="lead">Latest Messages</p>
+    <div>Message Count: {{ data.length }}</div>
+  </div>
+
+  <div class="progress progress-striped active" data-ng-show="isBusy">
+    <div class="bar" style="width: 100%;"></div>
+  </div>
+
+  <!-- Zen: .messages>(.message.row>(.title.col-md-10>lorem5)+(.date.col-md-2>{Feb 12, 2013})+(.contents.col-md-12>lorem)+(.toolbar.col-md-12>button.btn.btn-primary.reply-button>{Reply})+.replies.col-md-12)*5* -->
+  <div class="messages">
+    <div class="message row" data-ng-repeat="topic in data">
+      <div class="title col-md-10">{{ topic.title }}</div>
+      <div class="date col-md-2">{{ topic.created | date: "medium" }}</div>
+      <div class="contents col-md-12">{{ topic.body }}</div>
+      <div class="toolbar col-md-12">
+        <button class="btn btn-primary reply-button">Reply</button>
+      </div>
+      <div class="replies col-md-12" data-ng-repeat="reply in topic.replies">
+        <!-- Zen: (.reply>(.created.pull-right>{Feb 28,2013})+.content>lorem)*3* -->
+        <div class="reply">
+          <div class="created pull-right">{{ reply.created | date: "medium" }}</div>
+          <div class="content">{{ reply.body }}</div>
+        </div>
+      </div>
+    </div>
+
+
+    @*foreach (var topic in Model)
+      {
+        <div>@topic.Title</div>
+        <div>--- @topic.Body</div>
+      }*@
+
+  </div>
+</div>
